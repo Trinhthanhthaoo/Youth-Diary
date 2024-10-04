@@ -17,6 +17,13 @@ body {
   padding: 15px 20px;
   background-color: #004080; 
 }
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #004080;
+}
 
 
 .logo img {
@@ -201,30 +208,69 @@ ul.menu-list li:hover .dropdown-content {
       display: block;
   }
 }
-/* end header*/
-
-/* background */
-body {
-  margin: 0;
+/* end header */
+/* Start Slider */
+.slider-container {
+  position: relative;
+  max-width: 100%; /* Đảm bảo slider chiếm toàn bộ chiều rộng */
+  margin: auto;
+  overflow: hidden;
 }
 
-section {    
-  height: 100vh;
-  filter: brightness(60%);
-
-  /* scroll */
-  background-attachment: fixed;
+.slider-image {
+  width: 100%; /* Hình ảnh sẽ chiếm 100% chiều rộng của container */
+  vertical-align: middle;
+  object-fit: cover;
 }
 
-/* You need to use background-image but not "background" */
-section:nth-child(1) {
-  background-image: url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1244&q=80');
+.mySlides {
+  display: none; /* Ẩn tất cả các slide */
 }
 
-section:nth-child(2) {
-  background-image: url(https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+/* Navigation Buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
 }
 
-section:nth-child(3) {
-  background-image: url(https://images.unsplash.com/photo-1547841243-eacb14453cd9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80);
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 0;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .slider-image {
+    height: 400px; /* Đặt chiều cao cho hình ảnh trên màn hình nhỏ */
+    object-fit: cover;
+  }
+}
+
+/* Animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
