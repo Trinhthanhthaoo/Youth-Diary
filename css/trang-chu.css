@@ -274,3 +274,92 @@ ul.menu-list li:hover .dropdown-content {
   from {opacity: .4}
   to {opacity: 1}
 }
+
+/* mẫu intro */
+/* Adjust the slider and intro for seamless integration */
+.slider-container {
+  position: relative;
+  margin-bottom: -50px; /* Negative margin to bring the intro up */
+  z-index: 1;
+}
+
+.intro-section {
+  background-color: #fff;
+  width: 80%;
+  margin: 0 auto; /* Ensures the section is horizontally centered */
+  padding: 15px 5px;
+  position: relative;
+  z-index: 2; /* This will keep it above the slider */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow to lift intro */
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.intro-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.intro-item {
+  background-color: #d60000;
+  color: white;
+  width: 120px;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+}
+
+.intro-item i {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.intro-item p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* About thanh niên */
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px; /* Padding inside the content area */
+  background-color: #f0f0f0; /* Background color of the content section */
+  margin-bottom: 200px; /* Space below the content */
+  margin-top: 100px; /* Adjust this to create space from the intro section */
+}
+
+.sub-content {
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  width: 90%; /* Width of the content */
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.content-blog {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.content-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.content-img img {
+  max-width: 100%;
+  border-radius: 10px; /* Optional: Rounds the image corners */
+}
