@@ -1,0 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.custom-class {
+    @apply bg-blue-500 text-white; /* Ví dụ sử dụng lớp tiện ích */
+  }
