@@ -166,3 +166,5 @@ $(".swiper-full").mouseenter(function () {
 $(".swiper-full").mouseleave(function () {
 	swiperFull.autoplay.start();
 });
+
+// blog developer 
