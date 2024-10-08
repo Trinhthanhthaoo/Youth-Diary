@@ -47,6 +47,7 @@
     margin:0;
     overflow-x:hidden !important;
     font-family:var(--defaultfont);
+    padding-top: 70px; /* Thêm khoảng trống tương ứng với chiều cao của header */
     }
     
     a{
@@ -130,10 +131,18 @@ header {
     justify-content: space-between;
     background-size: cover;
     background-repeat: no-repeat;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-size: cover;
+    background-repeat: no-repeat;
     position: fixed; /* Cố định vị trí của header */
-    top: 0; /* Đặt vị trí header ở trên cùng */
-    left: 0; /* Đảm bảo header chiếm toàn bộ chiều rộng */
+    top: 0; /* Đặt vị trí ở trên cùng */
+    left: 0;
     z-index: 1000; /* Đảm bảo header nằm trên các phần tử khác */
+    height: 70px; /* Giả sử chiều cao của header là 70px */
+    background-color: #004080; /* Màu nền của header */
 }
 
 .container {
