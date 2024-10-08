@@ -102,7 +102,7 @@ ul.main-menu li:hover .dropdown-content {
 /* Hover Arrow Styling */
 /* Chỉ áp dụng cho menu cha */
 ul.menu-list li.dropdown > a::after {
-  content: "\f107"; /* Hoặc mã SVG/icon khác */
+  /* Hoặc mã SVG/icon khác */
   font-family: "Font Awesome 5 Free"; /* Hoặc font bạn đang sử dụng */
   font-weight: 900; 
   margin-left: 5px;
@@ -1047,3 +1047,89 @@ html {
   }
 }
 /* content share */
+
+@import url("https://fonts.googleapis.com/css2?family=Hind&family=Montserrat:wght@700&display=swap");
+
+:root {
+	--text-font: "Hind", sans-serif;
+	--title-font: "Montserrat", sans-serif;
+
+	--dark: #151515;
+	--grey: #717171;
+	--light-gray: #a1a1a1;
+	--faded-gray: #e1e1e1;
+}
+
+img {
+	width: 100%;
+	vertical-align: top;
+}
+
+.card {
+	text-align: center;
+
+	&__img {
+		margin-bottom: 30px;
+	}
+
+	&__title {
+		font-family: var(--title-font);
+		text-transform: capitalize;
+		color: var(--dark);
+		line-height: 35px;
+		font-size: 24px;
+	}
+
+	&__text {
+		font-family: var(--text-font);
+		color: var(--grey);
+		font-size: 16px;
+		line-height: 26px;
+		margin-bottom: 20px;
+	}
+
+	&__readbtn {
+		font-family: var(--text-font);
+		font-size: 14px;
+		text-transform: uppercase;
+		color: var(--light-gray);
+		text-decoration: none;
+		line-height: 26px;
+		transition: all ease 0.3s;
+		position: relative;
+
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 0;
+			height: 2px;
+			background-color: var(--dark);
+			transition: all ease 0.3s;
+		}
+
+		&:hover {
+			color: var(--dark);
+			&::after {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.divider {
+	background-color: var(--faded-gray);
+	height: 2px;
+	max-width: 30px;
+	margin: 15px auto 20px;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 35px;
+	max-width: 1300px;
+	margin: 50px auto;
+	padding: 0 10px;
+}
