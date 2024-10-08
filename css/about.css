@@ -9,12 +9,13 @@
   box-shadow: none;
 }
 .navbar {
-  background-color: #dcf0f1;
+  background-color: #004080;
 }
 .nav-link {
   font-size: 18px;
   position: relative;
   display: inline-block;
+  color: #fff;
 }
 
 .nav-link::before {
@@ -23,9 +24,11 @@
   content: "";
   position: absolute;
   border-radius: 5px;
-  background-color: #087075;
+  background-color: #c7d4d5;
 }
-
+.nav-link:hover{
+  color: #fff;
+}
 .nav-hover::before {
   width: 0%;
   bottom: 10px;
@@ -33,6 +36,9 @@
 
 .nav-hover:hover::before {
   width: 70%;
+}
+.navbar-nav {
+  justify-content: flex-start; /* Căn trái cho các mục trong navbar */
 }
 
 body {
@@ -53,7 +59,7 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: #66dce2;
+  background-color: #004080;
 }
 
 body {
@@ -67,7 +73,7 @@ body {
   justify-content: center;
 }
 #home a {
-  color: rgb(37, 35, 35);
+  color: #4873a7;
 }
 #home p {
   font-size: 25px;
